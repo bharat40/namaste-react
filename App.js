@@ -11,9 +11,13 @@
  * </div>
  */
 
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+
 const parentDiv = React.createElement("div", { id: "parent-container" }, [
     React.createElement("div", { id: "first-child-container" }, [
-        React.createElement("h1", { id: "heading1" }, "I am h1 tag"),
+        React.createElement("h1", { id: "heading1" }, "This is namaste react"),
         React.createElement("h2", { id: "heading2" }, "I am h2 tag")
     ]
     ),
