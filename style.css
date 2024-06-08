@@ -8,7 +8,7 @@
 
 :root {
   --nav-item-color: rgb(41, 40, 40);
-  --nar-item-hover-color: rgb(254, 136, 19);
+  --header-background-color: rgb(254, 136, 19);
   --restaurant-card-text-color: rgb(124, 117, 117);
 }
 
@@ -16,13 +16,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 960px;
-  border: 1.5px solid rgb(189, 189, 189);
+  gap: 825px;
+  background-color: var(--header-background-color);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   height: 120px;
 }
 
 .logo {
-  height: 120px;
+  height: 110px;
+  padding: 10px;
+  border-radius: 50%;
   cursor: pointer;
 }
 
@@ -31,13 +35,17 @@
   gap: 30px;
   list-style-type: none;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: bold;
   color: var(--nav-item-color);
   cursor: pointer;
 }
 
+.nav-items > ul > li {
+  transition: color 0.1s ease;
+}
+
 .nav-items > ul > li:hover {
-  color: var(--nar-item-hover-color);
+  color: white;
 }
 
 .search {
@@ -49,14 +57,21 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .restaurant-card {
   padding: 5px;
-  height: 300px;
-  width: 200px;
+  height: 400px;
+  width: 250px;
   text-align: center;
-  transition: color 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+.restaurant-logo {
+  height: 200px;
+  width: 100%;
 }
 
 .restaurant-card > h5 {
@@ -69,11 +84,11 @@
 }
 
 .restaurant-card > a:hover {
-  color: var(--nar-item-hover-color);
+  color: var(--header-background-color);
 }
 
 .restaurant-card:hover {
-  box-shadow: rgba(165, 158, 149, 0.2) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transform: scale(0.95);
 }
 
