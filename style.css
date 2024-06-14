@@ -16,7 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 825px;
+  gap: 900px;
   background-color: var(--header-background-color);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
@@ -34,7 +34,7 @@
   display: flex;
   gap: 30px;
   list-style-type: none;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   color: var(--nav-item-color);
   cursor: pointer;
@@ -48,23 +48,51 @@
   color: white;
 }
 
-.search {
-  padding: 10px;
+.body {
+  margin-top: 30px;
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.btns {
+  padding: 5px;
+  color: var(--nav-item-color);
+  background-color: var(--header-background-color);
+  font-weight: 600;
+  transition: transform 0.3s ease;
+  border: none;
+}
+
+.btns:hover {
+  cursor: pointer;
+  transform: scale(0.95);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#search-inp {
+  font-weight: 600;
 }
 
 .restaurant-container {
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 .restaurant-card {
   padding: 5px;
   height: 400px;
-  width: 250px;
+  width: 200px;
   text-align: center;
   transition: transform 0.3s ease;
 }

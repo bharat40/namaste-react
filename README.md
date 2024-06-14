@@ -81,3 +81,22 @@ const jsxHeading = <h1 className="head" tableIndex="5">Namaste React 🚀</h1>
 -      * Links
 -      * Address
 -      * Contact
+
+# Two types of export/import
+
+- default export/import
+
+export default Component;
+import Component from "path";
+
+- Names export/import
+
+export const Component;
+import {Component} from "path";
+
+# React Hooks
+
+(Normal JS utility function)
+
+- useState() - to generate superpowerfull State variable in react
+- useEffect() - 
