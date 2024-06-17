@@ -1,10 +1,11 @@
 import RestaurantCard from "./RestaurantCard";
 import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
+import Loading from "./Loading";
 
 const Body = () => {
   // State Varibale - Super powerfull variable (useState)
-  const [listOfRestaurants, setListOfRestaurant] = useState(resList);
+  const [listOfRestaurants, setListOfRestaurant] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -17,7 +18,14 @@ const Body = () => {
 
     const json = await data.json();
     console.log(json);
+    setListOfRestaurant(
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   };
+
+  if (listOfRestaurants.length === 0) {
+    return <Loading />;
+  }
 
   return (
     <div className="body">

@@ -42,6 +42,30 @@
   background-color: #57737a;
 }
 
+.loader-container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 12px solid #f3f3f3; /* Light grey */
+  border-top: 12px solid #3498db; /* Blue */
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .body {
   margin-top: 30px;
   display: flex;
