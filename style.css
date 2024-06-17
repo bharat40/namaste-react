@@ -7,10 +7,7 @@
 }
 
 :root {
-  --nav-item-light-mode-color: rgb(41, 40, 40);
-  /* --header-background-color: rgb(254, 136, 19); */
-  /* --header-background-color: #55acee; */
-  --header-light-mode-bg-color: #92a8d1;
+  --header-light-mode-bg-color: #85bdbf;
 }
 
 .header {
@@ -18,8 +15,8 @@
   justify-content: center;
   align-items: center;
   gap: 900px;
-  background-color: var(--header-light-mode-bg-color);
   height: 120px;
+  background-color: var(--header-light-mode-bg-color);
 }
 
 .logo {
@@ -33,12 +30,16 @@
   list-style-type: none;
   font-size: 16px;
   font-weight: bold;
-  color: var(--nav-item-light-mode-color);
+  color: white;
   cursor: pointer;
 }
 
 .nav-items > ul > li {
   transition: color 0.1s ease;
+}
+
+.nav-items > ul > li:hover {
+  background-color: #57737a;
 }
 
 .body {
@@ -55,12 +56,8 @@
   gap: 50px;
 }
 .btns {
-  padding: 5px;
-  color: var(--nav-item-light-mode-color);
   font-weight: 600;
   transition: transform 0.3s ease;
-  background-color: var(--header-light-mode-bg-color);
-  border: none;
 }
 
 .btns:hover {
@@ -69,6 +66,7 @@
 
 #search-inp {
   font-weight: 600;
+  border: none;
 }
 
 .restaurant-container {
