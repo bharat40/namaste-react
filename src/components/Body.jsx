@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   // State Varibale - Super powerfull variable (useState)
@@ -24,7 +25,7 @@ const Body = () => {
   };
 
   if (listOfRestaurants.length === 0) {
-    return <Loading />;
+    return <Shimmer />;
   }
 
   return (

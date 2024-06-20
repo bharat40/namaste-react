@@ -69,15 +69,13 @@
 .body {
   margin-top: 30px;
   display: flex;
-  gap: 12px;
   flex-direction: column;
 }
 
 .filter {
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 50px;
+  padding-left: 52px;
 }
 .btns {
   font-weight: 600;
@@ -96,9 +94,9 @@
 .restaurant-container {
   padding: 20px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 5px;
   margin-top: 50px;
 }
@@ -125,10 +123,6 @@
   color: var(--nav-item-color);
 }
 
-/* .restaurant-card > a:hover {
-  color: var(--header-background-color);
-} */
-
 .restaurant-card:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transform: scale(0.95);
@@ -136,4 +130,19 @@
 
 .restaurant-logo {
   width: 100%;
+}
+
+.shimmer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.shimmer-card {
+  height: 400px;
+  width: 200px;
+  background-color: rgba(128, 128, 128, 0.297);
+  margin-top: 20px;
 }
