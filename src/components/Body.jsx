@@ -5,8 +5,13 @@ import Loading from "./Loading";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
+  // theme
+  const [theme, setTheme] = useState("🌚Dark Mode");
   // State Varibale - Super powerfull variable (useState)
+  // whenever we change local state variable react re-render the component
   const [listOfRestaurants, setListOfRestaurant] = useState([]);
+  const [filteredRestaurant, setFilteredRestaurant] = useState([]);
+  const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     fetchData();
@@ -16,14 +21,18 @@ const Body = () => {
     const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.3610314&lng=76.8485468&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
-
+    //
     const json = await data.json();
     console.log(json);
     setListOfRestaurant(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
+    setFilteredRestaurant(
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   };
 
+  // conditional rendering -> rendering according to a condition
   if (listOfRestaurants.length === 0) {
     return <Shimmer />;
   }
@@ -32,24 +41,55 @@ const Body = () => {
     <div className="body">
       <div className="filter">
         <button
-          className="btns"
+          className="filter-btn"
           onClick={() => {
             const filteredList = listOfRestaurants.filter(
-              (res) => res.info.avgRating > 4.5
+              (res) => res.info.avgRating > 4.0
             );
             setListOfRestaurant(filteredList);
           }}
         >
           ⭐Top Rated Restaurants
         </button>
-        <button className="btns">
-          <input type="text" id="search-inp" />
-          🔍Search
-        </button>
-        <button className="btns">🌙Dark Mode</button>
+        <div className="search">
+          <input
+            type="text"
+            className="search-box"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          />
+          <button
+            className="search-btn"
+            onClick={() => {
+              // filter restaurant cards and update the UI
+              console.log(searchText);
+              const filteredRestaurant = listOfRestaurants.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
+              setFilteredRestaurant(filteredRestaurant);
+            }}
+          >
+            Search
+          </button>
+        </div>
+
+        {/* <button
+          className="theme-btn"
+          onClick={() => {
+            if (theme === "🌚Dark Mode") {
+              setTheme("🌞Light Mode");
+            } else {
+              setTheme("🌚Dark Mode");
+            }
+          }}
+        >
+          {theme}
+        </button> */}
       </div>
       <div className="restaurant-container">
-        {listOfRestaurants.map((restaurant) => (
+        {filteredRestaurant.map((restaurant) => (
           <RestaurantCard key={restaurant.info.id} resData={restaurant} />
         ))}
       </div>

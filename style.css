@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 900px;
+  gap: 800px;
   height: 120px;
   background-color: var(--header-light-mode-bg-color);
 }
@@ -26,6 +26,8 @@
 
 .nav-items > ul {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
   list-style-type: none;
   font-size: 16px;
@@ -36,6 +38,8 @@
 
 .nav-items > ul > li {
   transition: color 0.1s ease;
+  padding: 5px;
+  border-radius: 10%;
 }
 
 .nav-items > ul > li:hover {
@@ -77,18 +81,12 @@
   gap: 50px;
   padding-left: 52px;
 }
-.btns {
+.filter-btn {
   font-weight: 600;
-  transition: transform 0.3s ease;
 }
 
-.btns:hover {
+.filter-btn:hover {
   cursor: pointer;
-}
-
-#search-inp {
-  font-weight: 600;
-  border: none;
 }
 
 .restaurant-container {
@@ -98,7 +96,6 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 5px;
-  margin-top: 50px;
 }
 
 .restaurant-card {
@@ -145,4 +142,25 @@
   width: 200px;
   background-color: rgba(128, 128, 128, 0.297);
   margin-top: 20px;
+}
+
+.login-btn {
+  cursor: pointer;
+  padding: 5px;
+  background: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10%;
+  width: 100px;
+  border: none;
+}
+
+.login-btn:hover {
+  background-color: #57737a;
+}
+
+.search-btn {
+  font-weight: 600;
+  cursor: pointer;
 }
