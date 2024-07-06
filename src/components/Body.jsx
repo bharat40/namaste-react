@@ -7,21 +7,23 @@ import Shimmer from "./Shimmer";
 const Body = () => {
   // theme
   const [theme, setTheme] = useState("🌚Dark Mode");
+  // useState is used to create local state variable inside your functional component
   // State Varibale - Super powerfull variable (useState)
   // whenever we change local state variable react re-render the component
   const [listOfRestaurants, setListOfRestaurant] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
-
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
+    // const data = await fetch(
+    //   "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.3610314&lng=76.8485468&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    // );
     const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.3610314&lng=76.8485468&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
-    //
     const json = await data.json();
     console.log(json);
     setListOfRestaurant(
@@ -49,12 +51,13 @@ const Body = () => {
             setListOfRestaurant(filteredList);
           }}
         >
-          ⭐Top Rated Restaurants
+          Top Rated Restaurants
         </button>
         <div className="search">
           <input
             type="text"
             className="search-box"
+            placeholder="search"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
@@ -71,7 +74,7 @@ const Body = () => {
               setFilteredRestaurant(filteredRestaurant);
             }}
           >
-            Search
+            ⌕
           </button>
         </div>
 

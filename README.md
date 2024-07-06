@@ -100,3 +100,8 @@ import {Component} from "path";
 
 - useState() - to generate superpowerfull State variable in react
 - useEffect() - 
+
+
+# 2 types of routing in web apps
+- server side routing -> it refreshes the whole page to navigate to different section of a website
+- client side routing -> component getting interchange, whole page does not get refreshed

@@ -2,8 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
@@ -16,7 +15,7 @@
   align-items: center;
   gap: 800px;
   height: 120px;
-  background-color: var(--header-light-mode-bg-color);
+  border-bottom: 1px solid black;
 }
 
 .logo {
@@ -31,19 +30,25 @@
   gap: 30px;
   list-style-type: none;
   font-size: 16px;
-  font-weight: bold;
-  color: white;
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-items > ul > li > Link {
+  text-decoration: none;
 }
 
 .nav-items > ul > li {
   transition: color 0.1s ease;
   padding: 5px;
-  border-radius: 10%;
 }
 
 .nav-items > ul > li:hover {
-  background-color: #57737a;
+  background-color: rgb(242, 241, 241);
 }
 
 .loader-container {
@@ -81,29 +86,37 @@
   gap: 50px;
   padding-left: 52px;
 }
+
 .filter-btn {
-  font-weight: 600;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #0066ff;
+  color: white;
 }
 
 .filter-btn:hover {
   cursor: pointer;
+  background-color: #035fe9;
 }
 
 .restaurant-container {
-  padding: 20px;
+  padding-left: 30px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 5px;
+  column-gap: 10px;
+  row-gap: 30px;
+  margin-top: 50px;
 }
 
 .restaurant-card {
   padding: 5px;
-  height: 400px;
+  height: 350px;
   width: 200px;
   text-align: center;
   transition: transform 0.3s ease;
+  border: 1px solid rgb(215, 213, 213);
 }
 
 .restaurant-logo {
@@ -134,33 +147,65 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 5px;
+  column-gap: 10px;
+  row-gap: 30px;
 }
 
 .shimmer-card {
-  height: 400px;
+  height: 350px;
   width: 200px;
-  background-color: rgba(128, 128, 128, 0.297);
+  background-color: rgba(184, 180, 180, 0.297);
   margin-top: 20px;
 }
 
 .login-btn {
   cursor: pointer;
-  padding: 5px;
   background: none;
   color: white;
   font-size: 16px;
   font-weight: bold;
-  border-radius: 10%;
-  width: 100px;
+  background-color: #0066ff;
+  width: 70px;
+  padding: 5px;
   border: none;
 }
 
 .login-btn:hover {
-  background-color: #57737a;
+  background-color: #035fe9;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .search-btn {
-  font-weight: 600;
   cursor: pointer;
+  height: 30px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 30px;
+  border: 1px solid black;
+  background-color: #0066ff;
+  font-size: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: none;
+  color: white;
+}
+
+.search-btn:hover {
+  background-color: #035fe9;
+}
+
+.search-box {
+  height: 30px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid black;
+  border-right: none;
 }
