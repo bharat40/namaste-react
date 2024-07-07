@@ -1,12 +1,11 @@
 import RestaurantCard from "./RestaurantCard";
 import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
-import Loading from "./Loading";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
   // theme
-  const [theme, setTheme] = useState("🌚Dark Mode");
+  // const [theme, setTheme] = useState("🌚Dark Mode");
   // useState is used to create local state variable inside your functional component
   // State Varibale - Super powerfull variable (useState)
   // whenever we change local state variable react re-render the component

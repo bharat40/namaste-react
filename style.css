@@ -209,3 +209,24 @@ a {
   border: 1px solid black;
   border-right: none;
 }
+
+.user-card {
+  border: 1px solid black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+
+.contact-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.insta-logo {
+  height: 25px;
+}

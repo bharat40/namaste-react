@@ -6,13 +6,14 @@ import About from "./components/About.jsx";
 import Contact from "./components/Contact.jsx";
 import Error from "./components/Error.jsx";
 import Cart from "./components/Cart.jsx";
-import { createBrowserRouter, Router, RouterProvider, Outlet } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const AppLayout = () => {
-    return (<div className="app">
-        <Header />
-        <Outlet />
-    </div>
+    return (
+        <div className="app">
+            <Header />
+            <Outlet />
+        </div>
     )
 }
 
