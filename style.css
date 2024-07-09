@@ -13,7 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 800px;
+  gap: 700px;
   height: 120px;
   border-bottom: 1px solid black;
 }
@@ -24,6 +24,7 @@
 }
 
 .nav-items > ul {
+  width: 650px;
   display: flex;
   justify-content: center;
   align-items: center;

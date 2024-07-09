@@ -1,6 +1,7 @@
 import { LOGO_URL } from "../utils/constants";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 // Link dont reload whole page but instead replace the component
 
 const Header = () => {
@@ -12,6 +13,7 @@ const Header = () => {
   useEffect(() => {
     console.log("useEffect is called");
   }, [btnName]);
+  const onlineStatus = useOnlineStatus();
   return (
     <div className="header">
       <div className="logo-container">
@@ -19,8 +21,8 @@ const Header = () => {
       </div>
       <div className="nav-items">
         <ul>
+          <li>status: {onlineStatus ? "🟢" : "🔴"}</li>
           <li>
-            {" "}
             <Link to={"/"}>🏠Home</Link>
           </li>
           <li>
