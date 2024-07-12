@@ -1,12 +1,18 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header.jsx";
 import Body from "./components/Body.jsx";
-import About from "./components/About.jsx";
-import Contact from "./components/Contact.jsx";
 import Error from "./components/Error.jsx";
-import Cart from "./components/Cart.jsx";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import Loading from "./components/Loading.jsx";
+
+
+// lazy loading
+// on demand loading
+const Contact = lazy(() => import("./components/Contact.jsx"));
+const About = lazy(() => import("./components/About.jsx"));
+const Grocery = lazy(() => import("./components/Grocery.jsx"));
+const Cart = lazy(() => import("./components/Cart.jsx"));
 
 const AppLayout = () => {
     return (
@@ -28,15 +34,19 @@ const appRouter = createBrowserRouter([
             },
             {
                 path: "/about",
-                element: <About />,
+                element: <Suspense fallback={<Loading />}><About /></Suspense>,
             },
             {
                 path: "/contact",
-                element: <Contact />,
+                element: <Suspense fallback={<Loading />}><Contact /></Suspense>,
+            },
+            {
+                path: "/grocery",
+                element: <Suspense fallback={<Loading />}><Grocery /></Suspense>,
             },
             {
                 path: "/cart",
-                element: <Cart />,
+                element: <Suspense fallback={<Loading />}><Cart /></Suspense>,
             },
         ],
         errorElement: < Error />,
