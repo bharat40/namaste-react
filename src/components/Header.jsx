@@ -15,12 +15,12 @@ const Header = () => {
   }, [btnName]);
   const onlineStatus = useOnlineStatus();
   return (
-    <div className="header">
+    <div className="flex justify-between">
       <div className="logo-container">
-        <img src={LOGO_URL} className="logo" />
+        <img className="w-36" src={LOGO_URL} />
       </div>
       <div className="nav-items">
-        <ul>
+        <ul className="flex p-4 m-4">
           <li>status: {onlineStatus ? "🟢" : "🔴"}</li>
           <li>
             <Link to={"/"}>🏠Home</Link>
