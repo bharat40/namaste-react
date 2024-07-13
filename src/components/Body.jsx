@@ -47,22 +47,11 @@ const Body = () => {
 
   return (
     <div className="body">
-      <div className="filter">
-        <button
-          className="filter-btn"
-          onClick={() => {
-            const filteredList = listOfRestaurants.filter(
-              (res) => res.info.avgRating > 4
-            );
-            setFilteredRestaurant(filteredList);
-          }}
-        >
-          Top Rated Restaurants
-        </button>
-        <div className="search">
+      <div className="flex">
+        <div className="m-4 p-4">
           <input
             type="text"
-            className="search-box"
+            className="border border-solid border-black text-center"
             placeholder="search"
             value={searchText}
             onChange={(e) => {
@@ -70,7 +59,7 @@ const Body = () => {
             }}
           />
           <button
-            className="search-btn"
+            className="px-4 py-1 bg-green-200 m-4 rounded-lg"
             onClick={() => {
               // filter restaurant cards and update the UI
               console.log(searchText);
@@ -80,22 +69,22 @@ const Body = () => {
               setFilteredRestaurant(filteredRestaurant);
             }}
           >
-            ⌕
+            Search
           </button>
         </div>
-
-        {/* <button
-          className="theme-btn"
-          onClick={() => {
-            if (theme === "🌚Dark Mode") {
-              setTheme("🌞Light Mode");
-            } else {
-              setTheme("🌚Dark Mode");
-            }
-          }}
-        >
-          {theme}
-        </button> */}
+        <div className="m-4 p-4 flex items-center">
+          <button
+            className="px-4 py-1 bg-gray-300 rounded-lg"
+            onClick={() => {
+              const filteredList = listOfRestaurants.filter(
+                (res) => res.info.avgRating > 4
+              );
+              setFilteredRestaurant(filteredList);
+            }}
+          >
+            Top Rated Restaurants
+          </button>
+        </div>
       </div>
       <div className="restaurant-container">
         {filteredRestaurant.map((restaurant) => (
