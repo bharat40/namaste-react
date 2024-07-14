@@ -47,11 +47,11 @@ const Body = () => {
 
   return (
     <div className="body">
-      <div className="flex">
+      <div className="flex justify-center">
         <div className="m-4 p-4">
           <input
             type="text"
-            className="border border-solid border-black text-center"
+            className="border border-solid border-gray-300 text-center focus:border-green-400 outline-none"
             placeholder="search"
             value={searchText}
             onChange={(e) => {
@@ -59,7 +59,7 @@ const Body = () => {
             }}
           />
           <button
-            className="px-4 py-1 bg-green-200 m-4 rounded-lg"
+            className="px-4 py-1 bg-green-200 m-2 rounded-lg"
             onClick={() => {
               // filter restaurant cards and update the UI
               console.log(searchText);
@@ -74,7 +74,7 @@ const Body = () => {
         </div>
         <div className="m-4 p-4 flex items-center">
           <button
-            className="px-4 py-1 bg-gray-300 rounded-lg"
+            className="px-4 py-1 bg-green-200 rounded-lg"
             onClick={() => {
               const filteredList = listOfRestaurants.filter(
                 (res) => res.info.avgRating > 4
@@ -86,7 +86,7 @@ const Body = () => {
           </button>
         </div>
       </div>
-      <div className="restaurant-container">
+      <div className="flex flex-wrap justify-center">
         {filteredRestaurant.map((restaurant) => (
           <RestaurantCard key={restaurant.info.id} resData={restaurant} />
         ))}

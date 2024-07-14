@@ -15,30 +15,37 @@ const Header = () => {
   }, [btnName]);
   const onlineStatus = useOnlineStatus();
   return (
-    <div className="flex justify-between bg-pink-200 shadow-md">
+    <div className="flex justify-between border-b ">
       <div className="logo-container">
         <img className="w-36" src={LOGO_URL} />
       </div>
       <div className="flex items-center">
-        <ul className="flex p-4 m-4">
-          <li className="px-4">status: {onlineStatus ? "🟢" : "🔴"}</li>
-          <li className="px-4">
-            <Link to={"/"}>🏠Home</Link>
+        <ul className="flex p-4 m-4 items-center gap-8">
+          <li className="px-4 w-28 flex gap-1">
+            status:{" "}
+            {onlineStatus ? (
+              <p className="text-green-600">online</p>
+            ) : (
+              <p className="text-red-600">offline</p>
+            )}
           </li>
-          <li className="px-4">
-            <Link to={"/about"}>👥About Us</Link>
+          <li className="px-3 py-1 hover:text-green-400">
+            <Link to={"/"}>Home</Link>
           </li>
-          <li className="px-4">
-            <Link to={"/contact"}>📞Contact Us</Link>
+          <li className="px-3 py-1 hover:text-green-400">
+            <Link to={"/about"}>About Us</Link>
           </li>
-          <li className="px-4">
-            <Link to={"/grocery"}>🛍️Grocery</Link>
+          <li className="px-3 py-1 hover:text-green-400">
+            <Link to={"/contact"}>Contact Us</Link>
           </li>
-          <li className="px-4">
-            <Link to={"/cart"}>🛒Cart</Link>
+          <li className="px-3 py-1 hover:text-green-400">
+            <Link to={"/grocery"}>Grocery</Link>
+          </li>
+          <li className="px-3 py-1 hover:text-green-400">
+            <Link to={"/cart"}>Cart</Link>
           </li>
           <button
-            className="px-4"
+            className="px-4 py-1 bg-green-200 m-2 rounded-lg"
             onClick={() => {
               if (btnName === "Login") {
                 setBtnName("Logout");
