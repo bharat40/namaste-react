@@ -29,23 +29,23 @@ const Header = () => {
               <p className="text-red-600">offline</p>
             )}
           </li>
-          <li className="px-3 py-1 hover:text-green-400">
+          <li className="px-3 py-1 hover:text-indigo-500">
             <Link to={"/"}>Home</Link>
           </li>
-          <li className="px-3 py-1 hover:text-green-400">
+          <li className="px-3 py-1 hover:text-indigo-500">
             <Link to={"/about"}>About Us</Link>
           </li>
-          <li className="px-3 py-1 hover:text-green-400">
+          <li className="px-3 py-1 hover:text-indigo-500">
             <Link to={"/contact"}>Contact Us</Link>
           </li>
-          <li className="px-3 py-1 hover:text-green-400">
+          <li className="px-3 py-1 hover:text-indigo-500">
             <Link to={"/grocery"}>Grocery</Link>
           </li>
-          <li className="px-3 py-1 hover:text-green-400">
+          <li className="px-3 py-1 hover:text-indigo-500">
             <Link to={"/cart"}>Cart</Link>
           </li>
           <button
-            className="px-4 py-1 bg-green-200 m-2 rounded-lg"
+            className="px-4 py-1 bg-indigo-500 m-2 rounded-lg text-white font-semibold hover:bg-indigo-400"
             onClick={() => {
               if (btnName === "Login") {
                 setBtnName("Logout");

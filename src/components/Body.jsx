@@ -51,7 +51,7 @@ const Body = () => {
         <div className="m-4 p-4">
           <input
             type="text"
-            className="border border-solid border-gray-300 text-center focus:border-green-400 outline-none"
+            className="border border-solid border-gray-300 text-center focus:border-blue-600 outline-none"
             placeholder="search"
             value={searchText}
             onChange={(e) => {
@@ -59,7 +59,7 @@ const Body = () => {
             }}
           />
           <button
-            className="px-4 py-1 bg-green-200 m-2 rounded-lg"
+            className="px-4 py-1 bg-indigo-500 m-2 rounded-lg text-white font-semibold hover:bg-indigo-400"
             onClick={() => {
               // filter restaurant cards and update the UI
               console.log(searchText);
@@ -74,7 +74,7 @@ const Body = () => {
         </div>
         <div className="m-4 p-4 flex items-center">
           <button
-            className="px-4 py-1 bg-green-200 rounded-lg"
+            className="px-4 py-1 bg-indigo-500 rounded-lg text-white font-semibold hover:bg-indigo-400"
             onClick={() => {
               const filteredList = listOfRestaurants.filter(
                 (res) => res.info.avgRating > 4
