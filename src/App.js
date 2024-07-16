@@ -13,6 +13,7 @@ const Contact = lazy(() => import("./components/Contact.jsx"));
 const About = lazy(() => import("./components/About.jsx"));
 const Grocery = lazy(() => import("./components/Grocery.jsx"));
 const Cart = lazy(() => import("./components/Cart.jsx"));
+const RestaurantMenu = lazy(() => import("./components/RestaurantMenu.jsx"));
 
 const AppLayout = () => {
     return (
@@ -47,6 +48,10 @@ const appRouter = createBrowserRouter([
             {
                 path: "/cart",
                 element: <Suspense fallback={<Loading />}><Cart /></Suspense>,
+            },
+            {
+                path: "/menu",
+                element: <Suspense fallback={<Loading />}> < RestaurantMenu /> </Suspense >,
             },
         ],
         errorElement: < Error />,
