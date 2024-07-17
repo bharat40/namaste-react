@@ -1,5 +1,13 @@
-const ResturantMenu = () => {
-  return <h1>Menu Section</h1>;
+import React from "react";
+import RestaurantCategory from "./RestaurantCategory";
+const RestaurantCard = () => {
+  return (
+    <div className="text-center">
+      <h1 className="font-bold m-4">Restaurant Name</h1>
+      {/** accordion code*/}
+      <RestaurantCategory />
+    </div>
+  );
 };
 
-export default ResturantMenu;
+export default RestaurantCard;
