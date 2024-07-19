@@ -1,4 +1,4 @@
-import { WRAP_IMAGE_URL } from "../utils/constants";
+import wrap from "../utils/menuItemsImages/wrap.jpg";
 import AddButton from "./AddButton";
 const SignatureList = () => {
   return (
@@ -9,7 +9,7 @@ const SignatureList = () => {
         <p>Enjoy your favourite Signature wrap</p>
       </div>
       <div>
-        <img src={WRAP_IMAGE_URL} alt="signature-wrap-image" className="h-24" />
+        <img src={wrap} alt="image-3" className="h-28" />
         <AddButton />
       </div>
     </div>

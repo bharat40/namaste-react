@@ -1,4 +1,4 @@
-import { SANDWICH_IMAGE_URL } from "../utils/constants";
+import Sandwich from "../utils/menuItemsImages/sandwich.jpg";
 import AddButton from "./AddButton";
 const RecommendedList = () => {
   return (
@@ -9,7 +9,7 @@ const RecommendedList = () => {
         <p>Enjoy your favourite sandwich with coke</p>
       </div>
       <div>
-        <img src={SANDWICH_IMAGE_URL} alt="sandwich-image" className="h-24" />
+        <img src={Sandwich} alt="image1" className="h-28"/>
         <AddButton />
       </div>
     </div>

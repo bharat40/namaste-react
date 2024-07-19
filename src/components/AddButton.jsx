@@ -1,6 +1,6 @@
 const AddButton = () => {
   return (
-    <button className="text-green-700 bg-white shadow-lg font-bold p-2 rounded-md my-1 ">
+    <button className="bg-green-700 shadow-lg font-bold p-2 rounded-md my-1 text-white">
       Add +
     </button>
   );

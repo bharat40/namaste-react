@@ -1,4 +1,4 @@
-import { NON_VEG_SANDWICH_IMAGE_URL } from "../utils/constants";
+import nonvegsandwich from "../utils/menuItemsImages/nonvegsandwich.jpg";
 import AddButton from "./AddButton";
 const NonVegList = () => {
   return (
@@ -9,11 +9,7 @@ const NonVegList = () => {
         <p>Enjoy your favourite Tandoori Chicken Tikka Sandwich</p>
       </div>
       <div>
-        <img
-          src={NON_VEG_SANDWICH_IMAGE_URL}
-          alt="non-veg-sandwich-image"
-          className="h-32"
-        />
+        <img src={nonvegsandwich} alt="image-2" className="h-28"/>
         <AddButton />
       </div>
     </div>

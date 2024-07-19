@@ -4,7 +4,6 @@ const RestaurantCard = () => {
   return (
     <div className="text-center">
       <h1 className="font-bold m-4">Restaurant Name</h1>
-      {/** accordion code*/}
       <RestaurantCategory />
     </div>
   );
