@@ -54,7 +54,7 @@ const Body = () => {
         <div className="m-4 p-4">
           <input
             type="text"
-            className="border border-solid border-gray-300 text-center focus:border-blue-600 outline-none"
+            className=" px-4 py-1 rounded-lg border border-solid border-gray-300 text-center focus:border-blue-600 outline-none"
             placeholder="search"
             value={searchText}
             onChange={(e) => {
