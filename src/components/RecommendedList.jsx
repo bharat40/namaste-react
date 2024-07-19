@@ -9,7 +9,7 @@ const RecommendedList = () => {
         <p>Enjoy your favourite sandwich with coke</p>
       </div>
       <div>
-        <img src={Sandwich} alt="image1" className="h-28"/>
+        <img src={Sandwich} alt="image1" className="h-28" />
         <AddButton />
       </div>
     </div>
