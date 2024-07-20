@@ -2,7 +2,7 @@ import wrap from "../utils/menuItemsImages/wrap.jpg";
 import AddButton from "./AddButton";
 const SignatureList = () => {
   return (
-    <div className="flex justify-between my-5">
+    <div className="flex justify-between my-5 px-5">
       <div className="text-left">
         <h1>Aloo Patty Signature Wrap</h1>
         <h1>$250</h1>

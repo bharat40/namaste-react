@@ -10,7 +10,7 @@ const About = () => {
           alt="bharat-image"
           className="h-[480px] border rounded-md"
         />
-        <p className="text-[30px] text-center text-slate-500 font-semibold">
+        <p className="text-[25px] text-center text-slate-500 font-semibold">
           Hello 👋 I'm Bharat, third-year student at Chitkara University,
           focused on <br />
           front-end development 💻 and learning C++ and data structures <br />
@@ -18,7 +18,7 @@ const About = () => {
           solutions 👨‍💻
         </p>
       </div>
-      <div className="flex gap-6 font-bold">
+      <div className="flex gap-6 font-bold text-white">
         <Link to="https://www.instagram.com/bharat.dhiman21/">
           <h1 className="hover:underline">Instagram: @bharat.dhiman21</h1>
         </Link>

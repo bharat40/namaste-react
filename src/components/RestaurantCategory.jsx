@@ -30,7 +30,7 @@ const RestaurantCategory = () => {
   };
   return (
     <div className="flex flex-col items-center">
-      <div className="border bg-gray-50 shadow-lg w-[650px] my-2 p-4 hover:bg-gray-100">
+      <div className="border bg-gray-50 shadow-lg w-[650px] my-2 p-4 hover:bg-gray-100 ">
         <div
           className="flex justify-between cursor-pointer"
           onClick={handleClick1}
