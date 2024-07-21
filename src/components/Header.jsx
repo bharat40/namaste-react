@@ -20,10 +20,10 @@ const Header = () => {
   return (
     <div className="flex justify-between border-b">
       <div className="logo-container">
-        <img className="w-36" src={LOGO_URL} />
+        <img className="w-24" src={LOGO_URL} />
       </div>
       <div className="flex items-center">
-        <ul className="flex p-4 m-4 items-center gap-8">
+        <ul className="flex p-4 m-4 items-center gap-8 font-semibold">
           <li className="px-4 w-28 flex gap-1">
             status:{" "}
             {onlineStatus ? (
@@ -47,18 +47,20 @@ const Header = () => {
           <li className="px-3 py-1 hover:text-indigo-500">
             <Link to={"/cart"}>Cart</Link>
           </li>
-          <button
-            className="px-4 py-1 bg-indigo-500 m-2 rounded-lg text-white font-semibold hover:bg-indigo-400"
-            onClick={() => {
-              if (btnName === "Login") {
-                setBtnName("Logout");
-              } else {
-                setBtnName("Login");
-              }
-            }}
-          >
-            {btnName}
-          </button>
+          <Link to={"/login"}>
+            <button
+              className="px-4 py-1 bg-indigo-500 m-2 rounded-lg text-white font-semibold hover:bg-indigo-400"
+              onClick={() => {
+                if (btnName === "Login") {
+                  setBtnName("Logout");
+                } else {
+                  setBtnName("Login");
+                }
+              }}
+            >
+              {btnName}
+            </button>
+          </Link>
           <li className="px-3 py-1">
             <span className="font-semibold">User:</span> {loggedInUser}
           </li>

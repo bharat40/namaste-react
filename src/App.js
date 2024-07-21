@@ -15,6 +15,7 @@ const About = lazy(() => import("./components/About.jsx"));
 const Grocery = lazy(() => import("./components/Grocery.jsx"));
 const Cart = lazy(() => import("./components/Cart.jsx"));
 const RestaurantMenu = lazy(() => import("./components/RestaurantMenu.jsx"));
+const LoginPage = lazy(() => import("./components/LoginPage.jsx"));
 
 
 
@@ -32,7 +33,7 @@ const AppLayout = () => {
     }, []);
 
     return (
-        <UserContext.Provider value={{ loggedInUser: userName }}>
+        <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
             <div className="app">
                 <Header />
                 <Outlet />
@@ -69,6 +70,10 @@ const appRouter = createBrowserRouter([
             {
                 path: "/menu",
                 element: <Suspense fallback={<Loading />}><RestaurantMenu /></Suspense >,
+            },
+            {
+                path: "/login",
+                element: <Suspense fallback={<Loading />}><LoginPage /></Suspense>,
             },
         ],
         errorElement: < Error />,

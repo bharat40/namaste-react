@@ -88,6 +88,7 @@ const Body = () => {
             Top Rated Restaurants
           </button>
         </div>
+        
       </div>
       <div className="flex flex-wrap justify-center">
         {filteredRestaurant.map((restaurant) => (

@@ -18,15 +18,11 @@ const About = () => {
           solutions 👨‍💻
         </p>
       </div>
-      <div className="flex gap-6 font-bold text-white">
-        <Link to="https://www.instagram.com/bharat.dhiman21/">
-          <h1 className="hover:underline">Instagram: @bharat.dhiman21</h1>
-        </Link>
-        <Link to="https://github.com/bharat40">
-          <h1 className="hover:underline">Github: bharat40</h1>
-        </Link>
+      <div className="flex gap-6 font-bold">
+        <h1 className="hover:underline hover:text-blue-500 cursor-pointer">Instagram</h1>
+        <h1 className="hover:underline   hover:text-blue-500 cursor-pointer">GitHub</h1>
+        <h1 className="hover:underline   hover:text-blue-500 cursor-pointer">Portfolio</h1>
       </div>
-      <h1></h1>
     </div>
   );
 };

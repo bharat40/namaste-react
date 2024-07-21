@@ -1,8 +1,14 @@
+import React from "react";
+
 const AddButton = () => {
   return (
-    <button className="bg-black shadow-lg font-semibold p-2 rounded-md my-1 text-white">
-      Add +
-    </button>
+    <div>
+      <button
+        className="bg-black shadow-lg font-semibold p-2 rounded-md my-1 text-white hover:bg-gray-700"
+      >
+        Add +
+      </button>
+    </div>
   );
 };
 
