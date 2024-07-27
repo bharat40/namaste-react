@@ -49,7 +49,7 @@ const Header = () => {
           </li>
           <Link to={"/login"}>
             <button
-              className="px-4 py-1 bg-indigo-500 m-2 rounded-lg text-white font-semibold hover:bg-indigo-400"
+              className="px-4 py-1 bg-indigo-500 m-2 rounded-lg text-white font-semibold hover:bg-indigo-400 active:bg-indigo-500"
               onClick={() => {
                 if (btnName === "Login") {
                   setBtnName("Logout");

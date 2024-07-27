@@ -16,13 +16,13 @@ const LoginPage = () => {
             setUserName(e.target.value);
           }}
         />
-        <button className="px-4 py-1 bg-indigo-500 rounded-lg text-white font-semibold hover:bg-indigo-400">
+        <button className="px-4 py-1 bg-indigo-500 rounded-lg text-white font-semibold hover:bg-indigo-400 active:bg-indigo-500">
           Submit
         </button>
       </div>
       <div className="flex justify-center">
         <Link to={"/"}>
-          <button className="px-4 py-1 bg-indigo-500 rounded-lg text-white font-semibold hover:bg-indigo-400">
+          <button className="px-4 py-1 bg-indigo-500 rounded-lg text-white font-semibold hover:bg-indigo-400 active:bg-indigo-500">
             Go back
           </button>
         </Link>

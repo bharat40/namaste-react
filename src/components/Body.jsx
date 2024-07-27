@@ -3,6 +3,7 @@ import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import Mind from "../components/Mind";
 
 const Body = () => {
   // theme
@@ -13,6 +14,8 @@ const Body = () => {
   const [listOfRestaurants, setListOfRestaurant] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const [title, setTitle] = useState("none");
+  const [text, setText] = useState("");
 
   console.log(listOfRestaurants);
 
@@ -35,6 +38,8 @@ const Body = () => {
     setFilteredRestaurant(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
+    setTitle(json?.data.cards[0].card.card.header.title);
+    setText(json?.data.cards[0].card.card.imageGridCards.info);
   };
   const onlineStatus = useOnlineStatus();
   if (onlineStatus === false)
@@ -51,6 +56,7 @@ const Body = () => {
   return (
     <div className="body">
       <div className="flex justify-center">
+        <Mind title={title} text={text} />
         <div className="m-4 p-4">
           <input
             type="text"
@@ -62,7 +68,7 @@ const Body = () => {
             }}
           />
           <button
-            className="px-4 py-1 bg-indigo-500 m-2 rounded-lg text-white font-semibold hover:bg-indigo-400"
+            className="px-4 py-1 bg-indigo-500 m-2 rounded-lg text-white font-semibold hover:bg-indigo-400 active:bg-indigo-500"
             onClick={() => {
               // filter restaurant cards and update the UI
               console.log(searchText);
@@ -77,7 +83,7 @@ const Body = () => {
         </div>
         <div className="m-4 p-4 flex items-center">
           <button
-            className="px-4 py-1 bg-indigo-500 rounded-lg text-white font-semibold hover:bg-indigo-400"
+            className="px-4 py-1 bg-indigo-500 rounded-lg text-white font-semibold hover:bg-indigo-400 active:bg-indigo-500"
             onClick={() => {
               const filteredList = listOfRestaurants.filter(
                 (res) => res.info.avgRating > 4
@@ -88,7 +94,6 @@ const Body = () => {
             Top Rated Restaurants
           </button>
         </div>
-        
       </div>
       <div className="flex flex-wrap justify-center">
         {filteredRestaurant.map((restaurant) => (
