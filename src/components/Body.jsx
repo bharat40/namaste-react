@@ -1,9 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
-import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import Mind from "../components/Mind";
 
 const Body = () => {
   // theme
@@ -14,8 +12,6 @@ const Body = () => {
   const [listOfRestaurants, setListOfRestaurant] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
-  const [title, setTitle] = useState("none");
-  const [text, setText] = useState("");
 
   console.log(listOfRestaurants);
 
@@ -38,8 +34,6 @@ const Body = () => {
     setFilteredRestaurant(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    setTitle(json?.data.cards[0].card.card.header.title);
-    setText(json?.data.cards[0].card.card.imageGridCards.info);
   };
   const onlineStatus = useOnlineStatus();
   if (onlineStatus === false)
@@ -56,7 +50,6 @@ const Body = () => {
   return (
     <div className="body">
       <div className="flex justify-center">
-        <Mind title={title} text={text} />
         <div className="m-4 p-4">
           <input
             type="text"

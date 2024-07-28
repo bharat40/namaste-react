@@ -3,6 +3,7 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 // Link dont reload whole page but instead replace the component
 
 const Header = () => {
@@ -16,6 +17,9 @@ const Header = () => {
   // }, [btnName]);
   const onlineStatus = useOnlineStatus();
   const { loggedInUser } = useContext(UserContext);
+
+  // subscribing to the store using a Selector
+  const cartItems = useSelector((store) => store.cart.items);
 
   return (
     <div className="flex justify-between border-b">
@@ -45,7 +49,8 @@ const Header = () => {
             <Link to={"/grocery"}>Grocery</Link>
           </li>
           <li className="px-3 py-1 hover:text-indigo-500">
-            <Link to={"/cart"}>Cart</Link>
+            <Link to={"/cart"}>Cart -({cartItems.length} items)</Link>
+            {/* Cart - ({cartItems.length} items) */}
           </li>
           <Link to={"/login"}>
             <button
