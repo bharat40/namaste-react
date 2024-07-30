@@ -1,4 +1,5 @@
-# Namaste React
+- Api will not work in some cases due to CORS policy : No 'Access-Control-Allow-Origin'. if you want to run this app on your local machine you have to allow CORS policy 
+- install this chrome extension on your local machine to open the app :  https://chromewebstore.google.com/detail/cors-unblock/lfhmikememgdcahcdlaciloancbhjino
 
 # Parcel
 
@@ -114,3 +115,9 @@ import {Component} from "path";
 - Slice (Cartslice)
 - Dispatch Action
 - Selector
+
+
+# Types of testing (Developer)
+- Unit Testing
+- Integration Testing
+- End to End Testing => e2e testing
